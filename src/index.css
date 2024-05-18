@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-background);
+  color: var(--color-Text);
+  font-family: 'Montserrat', sans-serif;
+  
+}
+/*Se declara las variables globales de color de la pagina web*/
+#root {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  --color-primario: #54c0e4;
+  --color-secundario: #606060  ;
+  --color-Text:#131418;
+  --color-background:#ffff;
+  --color-border: #d3d3d3;
+  
+}

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  }
+  
+  body{
+  
+      display: flex;
+      
+      
+  }
+  .h1{
+
+    text-align: center;
+  }
+  .formulario{
+  
+      display: flex;
+      flex-direction: column;
+      padding: 80px 80px;
+      background-color: var(--color-primario);
+      border-radius: 5%;
+      width: 100%;
+      margin-bottom: 20px;
+      
+      
+  }
+  
+  .input-container {
+   
+      display: contents;
+      justify-content: center;
+  }
+  
+  
+  .input-container i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #000; /* Color del icono */
+  }
+  

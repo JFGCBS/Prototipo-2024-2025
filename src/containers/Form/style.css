@@ -1,0 +1,23 @@
+.ContInfoPersonal{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .InfoPersonal {
+    color: var(--color-secundario);
+  }
+  
+  .InfoPersonal h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .InfoPersonal p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .FormularioIngreso {
+    margin-top: 50px;
+  }
+  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel=" stylesheet" href="styles.css">
+  <title>Prototipo_2024</title>
+</head>
+
+<body>
+
+  <form onsubmit="return validarFormulario()">
+    <h5>Iniciar sesión</h5>
+    
+    <!-- Campo de usuario -->
+    <h4>Ingresar Usuario</h4>
+    <div class="input-container">
+      <i class="fa-solid fa-user"></i>
+      <input type="text" maxLength="6" placeholder="usuario" required pattern="^[a-zA-ZÀ- \\u00f1\\u00d1 ]+$" id="usuario" name="usuario" title="Ingrese un usuario válido (máximo 6 caracteres)">
+  </div>
+  <br>
+    
+    <!-- Campo de contraseña -->
+    <h4>Contraseña</h4>
+    <i class="fa-solid fa-lock"></i>
+    <input type="password" maxLength="6" placeholder="Password" required pattern="^\d{6}$" id="contraseña" name="contraseña" title="Ingrese una contraseña válida (exactamente 6 dígitos)">
+    <br>
+    
+    <!-- Campo de rol -->
+    <h4>Rol</h4>
+    <i class="fa-solid fa-user-plus"></i>
+    <select className="Formacion" required>
+        <option value="">Seleccione un rol</option>
+        <option value="Adm">Administrador</option>
+        <option value="User">Usuario</option>
+    </select>
+    <br>
+    
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+
+        
+    
+</script>
+
+  <script src=" main.js"></script>
+  <div id="root"></div>
+
+
+</body>
+
+</html>
