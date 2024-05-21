@@ -1,46 +1,72 @@
-* {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+    background-image: url('https://live.staticflickr.com/65535/49235307772_007a4a7123_b.jpg');
+    background-size: cover;
+    background-position: center;
   }
   
-  body{
-  
-      display: flex;
-      
-      
-  }
-  .h1{
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--color-form);
+    border-radius: 5%;
+    align-items: center; /* Centra horizontalmente los elementos del formulario */
+    font-size: 2px; /* Tamaño de la fuente */
+    box-shadow: 0 4px 8px rgba(35, 233, 157, 0.1); /* Agrega sombra para mejorar la apariencia */
+    width: 350px;
+    height: 350px;
+    font-size: 10px;
+}
 
-    text-align: center;
-  }
-  .formulario{
-  
-      display: flex;
-      flex-direction: column;
-      padding: 80px 80px;
-      background-color: var(--color-primario);
-      border-radius: 5%;
-      width: 100%;
-      margin-bottom: 20px;
-      
-      
-  }
   
   .input-container {
-   
-      display: contents;
-      justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
   }
   
+  input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+    box-shadow: 10px;
+  }
   
-  .input-container i {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
-      color: #000; /* Color del icono */
+  button {
+    background-color: var(--color-primario);
+    color: rgb(243, 9, 9);
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold; 
+  }
+  
+  button:hover {
+    background-color: #e7eaee;
+  }
+  
+  .links-container {
+    margin-top: 10px;
+   
+  }
+  
+  .links-container a {
+    margin-right: 20px;
+    color: #eef1f3;
+    text-decoration: none;
+    font-size: 15px;
+    margin: bet
+    
+  }
+  
+  .links-container a:hover {
+    text-decoration: underline;
+    
   }
   

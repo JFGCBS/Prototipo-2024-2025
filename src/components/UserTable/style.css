@@ -1,0 +1,57 @@
+.user-table {
+    margin: 20px 0;
+}
+
+.user-table h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.user-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th, .user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.user-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.user-table td button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.user-table td button:first-child {
+    background-color: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+
+.user-table td button:last-child {
+    background-color: #dc3545;
+    color: white;
+}

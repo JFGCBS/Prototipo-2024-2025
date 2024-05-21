@@ -16,5 +16,5 @@ body {
   --color-Text:#131418;
   --color-background:#ffff;
   --color-border: #d3d3d3;
-  
+  --color-form: rgba(32, 131, 163, 0.8);
 }

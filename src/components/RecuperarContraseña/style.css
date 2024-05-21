@@ -1,0 +1,85 @@
+body {
+    background-color: #4a5d7d;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.recuperar-container {
+    text-align: center;
+    padding: 20px;
+    margin: 100px auto;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recuperar-container h2 {
+    color: #fff;
+    background-color: #4a5d7d;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.recuperar-container p {
+    color: #fff;
+    margin: 20px 0;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-container input {
+    width: calc(100% - 20px);
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #00bcd4;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button .icon {
+    margin-right: 5px;
+}
+
+.submit-button:hover {
+    background-color: #0097a7;
+}
+
+.message {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.login-link {
+    color: #00bcd4;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,36 @@
+.user-details {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.user-details h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-details form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.user-details label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.user-details input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.user-details input[readonly] {
+    background-color: #e9ecef;
+}
