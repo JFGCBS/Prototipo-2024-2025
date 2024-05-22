@@ -12,13 +12,15 @@ const usersData = [
 
 const GestionUsuarios = () => {
     const [selectedUser, setSelectedUser] = useState(null);
-    const [users, setUsers] = useState(usersData); // Define users state
+    const [users, setUsers] = useState(usersData);
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [userToDelete, setUserToDelete] = useState(null);
+    const [isEditing, setIsEditing] = useState(false);
 
     const handleUserSelect = (user) => {
-        setSelectedUser({ ...user }); // Copiar el usuario seleccionado antes de editar
-    }
+        setSelectedUser({ ...user });
+        setIsEditing(false);
+    };
 
     const handleUserSave = (updatedUser) => {
         setUsers(users.map(user => user.cedula === updatedUser.cedula ? updatedUser : user));
@@ -32,6 +34,16 @@ const GestionUsuarios = () => {
 
     const handleViewUser = (user) => {
         setSelectedUser(user);
+        setIsEditing(false);
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
+
+    const handleEditUser = (user) => {
+        setSelectedUser(user);
+        setIsEditing(true);
         window.scrollTo({
             top: document.body.scrollHeight,
             behavior: 'smooth'
@@ -55,26 +67,29 @@ const GestionUsuarios = () => {
                 <UserTable
                     users={users}
                     onSelectUser={handleUserSelect}
-                    onEditUser={handleUserSelect}
+                    onViewUser={handleViewUser}
+                    onEditUser={handleEditUser}
                     onDeleteUser={handleUserDelete}
-                    onViewUser={handleViewUser} // Agregar visualización de usuario
                 />
             </div>
             <div className="user-details">
-                <UserDetails user={selectedUser} onSaveUser={handleUserSave} />
+                <UserDetails user={selectedUser} onSaveUser={handleUserSave} isEditing={isEditing} />
             </div>
             {showConfirmation && (
                 <div className="delete-confirmation">
-                    <p>¿Está seguro que desea eliminar este registro? Esta operación es irreversible.</p>
+                    <h2>¿Está seguro que desea eliminar este registro?</h2><br />
+                     <p>Esta operación es irreversible.</p>
                     <button className="accept" onClick={confirmDelete}>Aceptar</button>
                     <button className="cancel" onClick={cancelDelete}>Cancelar</button>
                 </div>
             )}
-
         </div>
     );
 };
 
-export default GestionUsuarios;
+
+export { GestionUsuarios };
+
+
 
 

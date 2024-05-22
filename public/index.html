@@ -17,35 +17,7 @@
 
 <body>
 
-  <form onsubmit="return validarFormulario()">
-    <h5>Iniciar sesión</h5>
-    
-    <!-- Campo de usuario -->
-    <h4>Ingresar Usuario</h4>
-    <div class="input-container">
-      <i class="fa-solid fa-user"></i>
-      <input type="text" maxLength="6" placeholder="usuario" required pattern="^[a-zA-ZÀ- \\u00f1\\u00d1 ]+$" id="usuario" name="usuario" title="Ingrese un usuario válido (máximo 6 caracteres)">
-  </div>
-  <br>
-    
-    <!-- Campo de contraseña -->
-    <h4>Contraseña</h4>
-    <i class="fa-solid fa-lock"></i>
-    <input type="password" maxLength="6" placeholder="Password" required pattern="^\d{6}$" id="contraseña" name="contraseña" title="Ingrese una contraseña válida (exactamente 6 dígitos)">
-    <br>
-    
-    <!-- Campo de rol -->
-    <h4>Rol</h4>
-    <i class="fa-solid fa-user-plus"></i>
-    <select className="Formacion" required>
-        <option value="">Seleccione un rol</option>
-        <option value="Adm">Administrador</option>
-        <option value="User">Usuario</option>
-    </select>
-    <br>
-    
-    <button type="submit">Iniciar sesión</button>
-</form>
+  
 
 
         

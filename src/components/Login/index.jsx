@@ -17,51 +17,46 @@ export function Login({ setUser }) {
         }
         setError(false);
         setUser([nombre, rol]);
-        navigate('/Bienvenidos'); // Redirige al usuario a la página de Bienvenidos después del inicio de sesión exitoso
+        navigate('/Bienvenido');
     }
 
     return (
-        <section className="login-container"> {/* Asigna la clase para los estilos de la imagen de fondo */}
-            <h1>"Parqueo Inteligente: Monitoreo en Tiempo Real"</h1>
-            <form className="formulario" onSubmit={handleSubmit}>
-            <h1>Iniciar Sesión</h1>
-            <h1>Ingresar Usuario</h1>
-                <div className="input-container">
-                    <input
-                        type="text"
-                        placeholder="Usuario"
-                        value={nombre}
-                        onChange={e => setNombre(e.target.value)}
-                    />
-                    <h1>Contraseña</h1>
-                    <input
-                    
-                        type="password"
-                        placeholder="Contraseña"
-                        value={contraseña}
-                        onChange={e => setContraseña(e.target.value)}
-                    />
-                    <h1>Rol</h1>
-                    <select
-                        className="Rol"
-                        value={rol}
-                        onChange={e => setRol(e.target.value)}
-                        required
-                    >
-                        <option value="">Seleccione</option>
-                        <option value="Adm">Administrador</option>
-                        <option value="User">Usuario</option>
-                    </select>
-                </div>
-                <button type="submit">Acceder</button>
-                <div className="links-container">
-                    <a href="/Registro">Registrarse</a>
-                    <a href="/Recuperar_Contraseña">¿Olvidó su Contraseña?</a>
-                </div>
-            </form>
-           
-            {error && <p>Todos los campos son obligatorios</p>}
-        </section>
+        <div className="login-container">
+            <section className="formulario">
+                <h1>Iniciar Sesión</h1>
+                <form onSubmit={handleSubmit}>
+                    <div className="input-container">
+                        <input
+                            type="text"
+                            placeholder="Usuario"
+                            value={nombre}
+                            onChange={e => setNombre(e.target.value)}
+                        />
+                        <input
+                            type="password"
+                            placeholder="Contraseña"
+                            value={contraseña}
+                            onChange={e => setContraseña(e.target.value)}
+                        />
+                        <select
+                            value={rol}
+                            onChange={e => setRol(e.target.value)}
+                            required
+                        >
+                            <option value="">Seleccione</option>
+                            <option value="Adm">Administrador</option>
+                            <option value="User">Usuario</option>
+                        </select>
+                    </div>
+                    <button type="submit">Acceder</button>
+                    <div className="links-container">
+                        <a href="/Registro">Registrarse</a>
+                        <a href="/Recuperar_Contraseña">¿Olvidó su Contraseña?</a>
+                    </div>
+                </form>
+                {error && <p>Todos los campos son obligatorios</p>}
+            </section>
+        </div>
     );
 }
 

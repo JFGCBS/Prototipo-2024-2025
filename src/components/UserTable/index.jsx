@@ -1,8 +1,7 @@
-// src/components/UserTable.js
 import React from 'react';
 import './style.css';
 
-const UserTable = ({ users, onSelectUser, onEditUser, onDeleteUser }) => {
+const UserTable = ({ users, onViewUser, onEditUser, onDeleteUser, currentPage, totalPages, onPageChange }) => {
     return (
         <div className="user-table">
             <h2>Gestión de Usuarios</h2>
@@ -12,10 +11,10 @@ const UserTable = ({ users, onSelectUser, onEditUser, onDeleteUser }) => {
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
-                        <th>Cedula</th>
+                        <th>Cédula</th>
                         <th>Correo</th>
                         <th>Contacto</th>
-                        <th>ROL</th>
+                        <th>Rol</th>
                         <th>Fecha</th>
                         <th>Estado</th>
                         <th>Acciones</th>
@@ -23,7 +22,7 @@ const UserTable = ({ users, onSelectUser, onEditUser, onDeleteUser }) => {
                 </thead>
                 <tbody>
                     {users.map((user, index) => (
-                        <tr key={index} onClick={() => onSelectUser(user)}>
+                        <tr key={user.cedula}>
                             <td>{index + 1}</td>
                             <td>{user.nombre}</td>
                             <td>{user.apellido}</td>
@@ -33,16 +32,24 @@ const UserTable = ({ users, onSelectUser, onEditUser, onDeleteUser }) => {
                             <td>{user.rol}</td>
                             <td>{user.fecha}</td>
                             <td>{user.estado}</td>
-                            <td>
-                                <button onClick={() => onEditUser(user)}>Editar</button>
-                                <button onClick={() => onDeleteUser(user)}>Borrar</button>
+                            <td className="action-buttons">
+                                <button className="view-button" onClick={() => onViewUser(user)}>Ver</button>
+                                <button className="edit-button" onClick={() => onEditUser(user)}>Editar</button>
+                                <button className="delete-button" onClick={() => onDeleteUser(user)}>Borrar</button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <div className="pagination">
+                <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>Anterior</button>
+                <span>{currentPage} / {totalPages}</span>
+                <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>Siguiente</button>
+            </div>
         </div>
     );
 };
 
 export default UserTable;
+
+

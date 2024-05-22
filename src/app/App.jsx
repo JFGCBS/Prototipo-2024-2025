@@ -5,23 +5,22 @@ import {RecuperarContraseña} from '../components/RecuperarContraseña';
 import { Home } from '../pages/Home';
 import { FormularioId } from '../pages/FormularioId';
 import { Formulario } from '../pages/Formulario';
-import GestionUsuarios from '../pages/GestionUsuarios';
+import {GestionUsuarios} from '../pages/GestionUsuarios';
 import './App.css';
 
 
-const AppRoutes = () => {
+const AppRoutes = ({ user, setUser }) => {
     let routes = useRoutes([
-        
-      { path: '/home', element: <Home /> },
-      { path: '/recuperar', element: <RecuperarContraseña /> },
-      { path: '/form/:id', element: <FormularioId />},
-      { path: '/form', element: <Formulario />},
-      { path: '/GestionUsuarios', element: <GestionUsuarios /> },
-      { path: '/', element: <Login /> }
+        { path: '/', element: <Login setUser={setUser} /> },
+        { path: '/home', element: <Home user={user} setUser={setUser} /> },
+        { path: '/recuperar', element: <RecuperarContraseña /> },
+        { path: '/form/:id', element: <FormularioId /> },
+        { path: '/form', element: <Formulario /> },
+        { path: '/GestionUsuarios', element: <GestionUsuarios /> },
     ]);
-  
+
     return routes;
-  }
+}
 
 const App = () => {
     const [user, setUser] = useState([])
@@ -38,7 +37,6 @@ const App = () => {
             }
         </div >
         <AppRoutes />
-  
         </BrowserRouter>   
     );
 

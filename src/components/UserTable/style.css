@@ -1,36 +1,42 @@
 .user-table {
-    margin: 20px 0;
+    margin: -2px ;
+    
 }
 
 .user-table h2 {
     margin-bottom: 20px;
     color: #333;
-}
-
-.search-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    text-align: center;
 }
 
 .user-table table {
     width: 100%;
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000;
+    background-color: #eceaf7;
 }
+
 
 .user-table th, .user-table td {
-    padding: 12px;
+    padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom:2px solid #ddd;
+    font-size: 15px;
+    
 }
 
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    pointer-events: all;
+}
+
+
 .user-table th {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #333;
+    color: #fcf4f4;
+    font-size: 15px;
 }
 
 .user-table tr:hover {
@@ -43,15 +49,42 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+
 }
 
-.user-table td button:first-child {
-    background-color: #007bff;
-    color: white;
-    margin-right: 5px;
+
+/* Specific styles for the View button */
+.view-button {
+    background-color: #FFD700; /* Yellow */
 }
 
-.user-table td button:last-child {
-    background-color: #dc3545;
-    color: white;
+.view-button:hover {
+    background-color: #e4b013; /* Darker yellow on hover */
+}
+
+/* Specific styles for the Edit button */
+.edit-button {
+    background-color: #007BFF; /* Blue */
+}
+
+.edit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific styles for the Delete button */
+.delete-button {
+    background-color: #DC3545; /* Red */
+}
+
+.delete-button:hover {
+    background-color: #C82333; /* Darker red on hover */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+   
 }
