@@ -61,7 +61,6 @@ const GestionUsuarios = () => {
 
     return (
         <div className="gestion-usuarios">
-           
             <div className="user-table">
             <Header/>
                 <UserTable
