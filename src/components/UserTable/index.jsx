@@ -43,7 +43,7 @@ const UserTable = ({ users, onViewUser, onEditUser, onDeleteUser, currentPage, t
             </table>
             <div className="pagination">
                 <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>Anterior</button>
-                <span>{currentPage} / {totalPages}</span>
+                <span>{currentPage} {totalPages}</span>
                 <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>Siguiente</button>
             </div>
         </div>

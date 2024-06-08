@@ -1,11 +1,11 @@
-.user-table {
-    margin: -2px ;
-    
+.body {
+   padding: 0;
+   margin: 0; 
 }
 
 .user-table h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #f8e9e9;
     text-align: center;
 }
 

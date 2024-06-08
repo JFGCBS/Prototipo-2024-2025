@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import NavBar from '../../components/NavBar';
+import Header from '../../components/Header';
 import UserTable from '../../components/UserTable';
 import UserDetails from '../../components/DetailUser';
 import './style.css';
-
 const usersData = [
     { nombre: 'Juan', apellido: 'Gómez', cedula: '1722857579', correo: 'tmm4@utm.edu.ec', contacto: '0969367989', rol: 'Adm', fecha: '2024/03/17', estado: 'Activo' },
     { nombre: 'Hernán', apellido: 'Castillo', cedula: '1722857579', correo: 'hjzme@utm.edu.ec', contacto: '0969367989', rol: 'User', fecha: '2024/03/19', estado: 'Suspendido' },
@@ -62,8 +61,9 @@ const GestionUsuarios = () => {
 
     return (
         <div className="gestion-usuarios">
-            <NavBar />
+           
             <div className="user-table">
+            <Header/>
                 <UserTable
                     users={users}
                     onSelectUser={handleUserSelect}

@@ -11,7 +11,7 @@ import './App.css';
 
 const AppRoutes = ({ user, setUser }) => {
     let routes = useRoutes([
-        { path: '/', element: <Login setUser={setUser} /> },
+        
         { path: '/home', element: <Home user={user} setUser={setUser} /> },
         { path: '/recuperar', element: <RecuperarContraseña /> },
         { path: '/form/:id', element: <FormularioId /> },
